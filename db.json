@@ -370,5 +370,42 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "address": "rua praga",
+      "number": "123",
+      "optionalAddress": " casa 2",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "meniId": "cup"
+        },
+        {
+          "quantity": 1,
+          "meniId": "cake"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "address": "Rua M 2",
+      "number": "5",
+      "optionalAddress": "",
+      "paymentOption": "DEB",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "meniId": "zlasagna"
+        }
+      ],
+      "id": 4
+    }
+  ]
 }
