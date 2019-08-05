@@ -440,6 +440,22 @@
         }
       ],
       "id": 6
+    },
+    {
+      "name": "Rhanier Valadão",
+      "email": "rhaniersv@gmail.com",
+      "emailConfirmation": "rhaniersv@gmail.com",
+      "address": "Rua M 2",
+      "number": "00",
+      "optionalAddress": "M dois, qd 34, lt 16",
+      "paymentOption": "REF",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "meniId": "burger"
+        }
+      ],
+      "id": 7
     }
   ]
 }
