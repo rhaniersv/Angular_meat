@@ -36,9 +36,9 @@ export class SharedModule {
       ngModule: SharedModule,
       providers: [
         ShoppingCartService,
-        NotificationService,
         RestaurantsService,
-        OrderService
+        OrderService,
+        NotificationService
       ]
     };
   }
