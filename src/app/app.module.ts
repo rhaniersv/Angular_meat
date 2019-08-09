@@ -3,6 +3,7 @@ import { NgModule, LOCALE_ID } from "@angular/core";
 import { HttpModule } from "@angular/http";
 import { RouterModule, PreloadAllModules } from "@angular/router";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 import { ROUTES } from "./app.route";
 
 import { AppComponent } from "./app.component";
@@ -17,6 +18,8 @@ import { MenuItemComponent } from "./restaurant-detail/menu-item/menu-item.compo
 import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component";
 import { OrderSummaryComponent } from "./order-summary/order-summary.component";
 import { SharedModule } from "./shared/shared.module";
+import { NotfoundComponent } from "./notfound/notfound.component";
+import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { SharedModule } from "./shared/shared.module";
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,10 @@ import { SharedModule } from "./shared/shared.module";
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "pt-BR" }],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: LOCALE_ID, useValue: "pt-BR" }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
